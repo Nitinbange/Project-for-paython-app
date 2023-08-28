@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellopython-pod
+spec:
+  containers:
+    - name: hellopython
+      image: nitinbange/hellopython:latest
+      ports:
+        - containerPort: 5000

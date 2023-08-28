@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: hellopython-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hellopython
+template:
+  metadata:
+    labels:
+      app: hellopython
+spec:
+  containers:
+    - name: hellopython
+      image: nitinbange/hellopython:latest
+      ports:
+      - containerPort: 5000
